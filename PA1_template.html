@@ -64,17 +64,16 @@ img {
 </div>
 
 
+<p>Created by H.Wang on November 12, 2015</p>
 <div id="basic-settings" class="section level2">
 <h2>Basic Settings</h2>
-<pre class="r"><code>echo= TRUE  # make scripts visible to others
-# options(scipen = 1)</code></pre>
+<pre class="r"><code>echo= TRUE  # make scripts visible to others</code></pre>
 </div>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
 <pre class="r"><code># 1. Load the data
-unzip(&quot;activity.zip&quot;)</code></pre>
-<pre><code>## Warning in unzip(&quot;activity.zip&quot;): error 1 in extracting from zip file</code></pre>
-<pre class="r"><code>data &lt;- read.csv(&quot;activity.csv&quot;, colClasses = c(&quot;integer&quot;, &quot;Date&quot;, &quot;factor&quot;))
+unzip(&quot;activity.zip&quot;)
+data &lt;- read.csv(&quot;activity.csv&quot;, colClasses = c(&quot;integer&quot;, &quot;Date&quot;, &quot;factor&quot;))
 # 2. Process/transform the data
 data$month &lt;- as.numeric(format(data$date, &quot;%m&quot;))
 data_noNA &lt;- na.omit(data)

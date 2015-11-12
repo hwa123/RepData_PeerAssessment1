@@ -1,9 +1,11 @@
 # Reproducible Research: Peer Assessment 1
+Created by H.Wang on November 12, 2015
+
+
 ## Basic Settings
 
 ```r
 echo= TRUE  # make scripts visible to others
-# options(scipen = 1)
 ```
 ## Loading and preprocessing the data
 
@@ -11,13 +13,6 @@ echo= TRUE  # make scripts visible to others
 ```r
 # 1. Load the data
 unzip("activity.zip")
-```
-
-```
-## Warning in unzip("activity.zip"): error 1 in extracting from zip file
-```
-
-```r
 data <- read.csv("activity.csv", colClasses = c("integer", "Date", "factor"))
 # 2. Process/transform the data
 data$month <- as.numeric(format(data$date, "%m"))
@@ -256,3 +251,5 @@ xyplot(new_steps_avg$x ~ new_steps_avg$interval | new_steps_avg$days, layout= c(
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+
+

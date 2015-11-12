@@ -4,6 +4,8 @@ output:
   html_document:
     keep_md: true
 ---
+Created by H.Wang on November 12, 2015
+
 
 ## Basic Settings
 ```{r qplot, fig.width = 4, fig.height=2, message= FALSE}
